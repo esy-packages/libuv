@@ -1,5 +1,5 @@
 {
-  "source": "https://dist.libuv.org/dist/v1.9.1/libuv-v1.9.1.tar.gz#a668d636372e3276aecc6082082a86f86ddb67877",
+  "source": "https://dist.libuv.org/dist/v1.9.1/libuv-v1.9.1.tar.gz#668d636372e3276aecc6082082a86f86ddb67877",
   "override": {
     "buildsInSource": true,
     "build": [
