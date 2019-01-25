@@ -1,0 +1,26 @@
+{
+  "source": "https://dist.libuv.org/dist/v1.9.1/libuv-v1.9.1.tar.gz#a668d636372e3276aecc6082082a86f86ddb67877",
+  "override": {
+    "buildsInSource": true,
+    "build": [
+      "sh autogen.sh",
+      [
+        "./configure",
+        "--prefix=#{self.install}",
+        "--disable-dependency-tracking",
+        "--disable-silent-rules"
+      ],
+      "make",
+      "make install"
+    ],
+    "install": [
+      "make install"
+    ],
+    "exportedEnv": {
+      "PKG_CONFIG_PATH": {
+        "val": "#{self.lib / 'pkgconfig' : $PKG_CONFIG_PATH}",
+        "scope": "global"
+      }
+    }
+  }
+}
